@@ -1,5 +1,7 @@
 # <a name="z-textarea"></a> z-textarea
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/z-kit/z-textarea.svg)](https://greenkeeper.io/)
+
 [![Build]](https://travis-ci.org/z-kit/z-textarea) [![SemVer]](http://semver.org/) [![License]](LICENSE)
 
 A basic styled textarea for your web application
