@@ -1,0 +1,83 @@
+/*!
+ * Copyright (c) 2019 z-kit contributors.
+ * MIT LICENSE
+ * https://github.com/z-kit/z-textarea
+ */
+
+/* Variables */
+:root {
+  --primary-color: #2386ab;
+  --warning-color: #e0b938;
+  --success-color: #76b245;
+  --danger-color: #d8343f;
+  --error-color: #f00;
+  --neutral-color: #999;
+  --neutral-border-color: #ddd;
+  --dark-color: #333;
+}
+
+/* Container element */
+.z-textarea {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+}
+
+/* The textarea box */
+.z-textarea > textarea {
+  box-sizing: border-box;
+  display: block;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 10rem;
+  min-height: 4.5rem;
+  height: 4.5rem;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+  border: 2px solid var(--neutral-color);
+  transition: border-color 0.2s ease;
+}
+
+/* Indicates the container contains a floating label */
+.z-textarea--label { margin-top: 1rem; }
+.z-textarea--label > textarea { height: 3rem; }
+
+.z-textarea > textarea:disabled { opacity: 0.5; }
+.z-textarea > textarea:focus { border-color: var(--primary-color); }
+.z-textarea > textarea:focus + .z-textarea__label { color: var(--primary-color); }
+.z-textarea--success > textarea { border-color: var(--success-color); }
+.z-textarea--success > textarea + .z-textarea__label { color: var(--success-color); }
+.z-textarea--warning > textarea { border-color: var(--warning-color); }
+.z-textarea--warning > textarea:focus + .z-textarea__label { color: var(--warning-color); }
+.z-textarea--danger > textarea { border-color: var(--danger-color); }
+.z-textarea--danger > textarea:focus + .z-textarea__label { color: var(--danger-color); }
+.z-textarea--error > textarea { border-color: var(--error-color); }
+.z-textarea--error > textarea + .z-textarea__label { color: var(--error-color); }
+.z-textarea--dark > textarea { color: #fff; }
+
+/* The floating label */
+.z-textarea__label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0 2px;
+  font-size: 1rem;
+  z-index: 1;
+  background-color: #fff;
+  color: var(--neutral-color);
+  transition: font-size 0.2s ease, top 0.2s ease, left 0.2s ease;
+}
+
+.z-textarea--dark > .z-textarea__label { background-color: var(--dark-color); }
+
+.z-textarea > textarea:focus + .z-textarea__label,
+.z-textarea > textarea:valid + .z-textarea__label,
+.z-textarea--success > textarea + .z-textarea__label,
+.z-textarea--error > textarea + .z-textarea__label {
+  font-size: 0.85rem;
+  top: -0.5rem;
+  left: 1rem;
+}
