@@ -156,7 +156,7 @@
     "@babel/runtime": "^7.4.3",
     "@storybook/addons": "^v5.0.6",
     "@storybook/react": "^v5.0.6",
-    "acorn": "^6.1.1",
+    "acorn": "^7.0.0",
     "autoprefixer": "^9.5.1",
     "ava": "^1.4.1",
     "babel-eslint": "^10.0.1",
