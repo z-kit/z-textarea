@@ -69,6 +69,7 @@
   background-color: #fff;
   color: var(--neutral-color);
   transition: font-size 0.2s ease, top 0.2s ease, left 0.2s ease;
+  pointer-events: none;
 }
 
 .z-textarea--dark > .z-textarea__label { background-color: var(--dark-color); }
