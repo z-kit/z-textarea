@@ -42,7 +42,6 @@
 }
 
 /* Indicates the container contains a floating label */
-.z-textarea--label { margin-top: 1rem; }
 .z-textarea--label > textarea { height: 3rem; }
 
 .z-textarea > textarea:disabled { opacity: 0.5; }
